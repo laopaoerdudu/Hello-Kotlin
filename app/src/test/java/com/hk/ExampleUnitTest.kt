@@ -95,13 +95,13 @@ class ExampleUnitTest {
     /**
      *  1. 读文件，然后把文件的内容转成 char 的数组
      *  2. 过滤数组，空格符直接忽略
-     *  3.用 groupBy 来将整个数组重新分组（分组的结果是一个 map）， key 就是出现的字符，value 就是出现的全部字符
-     *  4.用 map 操作符 再将这个map 拍平成一个list，这个list的 内容形如：e 出现次数: 21
+     *  3.用 groupBy 来将整个数组重新分组（分组的结果是一个 map ）， key 就是出现的字符，value 就是出现的全部字符
+     *  4.用 map 操作符 再将这个 map 拍平成一个 list，这个 list 的 内容形如：e 出现次数: 21
      *  5.用 let 操作符 将结果打印出来即可
      */
     @Test
     fun `test`() {
-        File("/Users/david/study-code/Hello-Kotlin/src/enumTest.kt")
+        File("/Users/david/study-code/Hello-Kotlin/src/test.kt")
             .readText()
             .toCharArray()
             .filterNot {
