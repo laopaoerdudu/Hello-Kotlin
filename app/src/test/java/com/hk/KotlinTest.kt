@@ -62,6 +62,17 @@ class KotlinTest {
         run1()
     }
 
+    @Test
+    fun test8() {
+//        val list = listOf(1, 2, 3)
+//        println(list - 1)
+//        println(list - listOf(1))
+
+        val ones = listOf(1, 1, 1)
+        println(ones - 1)
+        println(ones - listOf(1))
+    }
+
     private fun run1() {
 //        val run: () -> Unit = {
 //            println("Run run run!")
