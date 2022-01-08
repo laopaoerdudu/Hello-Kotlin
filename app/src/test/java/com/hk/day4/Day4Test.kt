@@ -6,8 +6,7 @@ class Day4Test {
 
     @Test
     fun test() {
-        // 还是那句话，扩展函数的本质是静态函数，定义了同名的方法
-        // 你懂的！！！
+        // 对比 Day7 的 source code，品品
         printSys(C())
         printSys(D())
     }
