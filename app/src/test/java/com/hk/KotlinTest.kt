@@ -8,7 +8,7 @@ class KotlinTest {
     fun test1() {
         // hello()
         hello().invoke()
-        hello()()
+        //hello()()
     }
 
     @Test
@@ -71,6 +71,19 @@ class KotlinTest {
         val ones = listOf(1, 1, 1)
         println(ones - 1)
         println(ones - listOf(1))
+    }
+
+    @Test
+    fun test9() {
+        run2()
+    }
+
+    private fun run2() {
+        val run: () -> Unit = {
+            println("Run run run!")
+        }
+
+        Runnable { run() }.run()
     }
 
     private fun run1() {
