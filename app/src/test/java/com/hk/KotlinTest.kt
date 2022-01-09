@@ -156,4 +156,27 @@ class KotlinTest {
     private fun hello(): () -> Unit = {
         println("Hello, World")
     }
+
+    @Test
+    fun test10() {
+        hello { println(this) }
+    }
+
+    private fun hello(block: String.() -> Unit) {
+        "Hello1".block()
+        block("Hello2")
+    }
+
+    @Test
+    fun test11() {
+       // foo { println(it) }
+        foo({ print(it) })
+    }
+
+    private fun foo(one: L = {}, two: L = {}) {
+        one("one")
+        two("two")
+    }
 }
+
+typealias L = (String) -> Unit
