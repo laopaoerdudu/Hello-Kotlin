@@ -1,8 +1,18 @@
 package com.hk
 
 import org.junit.Test
+import java.nio.file.Files
+import java.nio.file.Paths
 
 class KotlinTest {
+
+    @Test
+    fun test0() {
+        val stream = Files.newInputStream(Paths.get("/some/file.txt"))
+        stream.buffered().reader().use { reader ->
+            println(reader.readText())
+        }
+    }
 
     @Test
     fun test1() {
