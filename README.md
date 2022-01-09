@@ -8,7 +8,6 @@ noinline 作用于函数类型参数，代表该参数不参与内联。
 inline fun foo(wantInlined: () -> Unit, noinline notWantInLined: () -> Unit) {}
 ```
 
-
 #### 双冒号 ::method 到底是什么？
 
 >这个双冒号的写法叫做函数引用 Function Reference 加了两个冒号，这个函数才变成了一个对象。 函数名的左边加上双冒号，它就不表示这个函数本身了，而是表示一个和这个函数具有相同功能的对象。
@@ -30,3 +29,5 @@ Kotlin 语言中，Lambda 表达式里不允许使用 return，除非整个 Lamb
 由于函数内联优化，两个函数类型参数均被内联，代码铺平后，return直接结束了main方法，导致println("Finish Greeting")未执行，
 
 Please reference `TT.kt`
+
+[Kotlin 集合函数速查](https://mp.weixin.qq.com/s/xRTiSQZ3v_u0DQTwG0H04A)
