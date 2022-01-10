@@ -1,6 +1,7 @@
 package com.hk.best
 
 import org.junit.Test
+import java.io.File
 
 class Best1 {
 
@@ -60,4 +61,6 @@ class Best1 {
             .forEach { println("forEach -> $it, ") }
         println(data)
     }
+
+    fun makeDir(path: String) = File(path).also{ it.mkdirs() }
 }
