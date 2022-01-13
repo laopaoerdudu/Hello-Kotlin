@@ -19,12 +19,12 @@ public class ReflectWrapper {
             int sdkInt = sdkIntField.getInt(null);
             if (sdkInt >= 28) {
                 Field classLoader = ReflectWrapper.class.getDeclaredField("classLoaderOffsetHelper");
-                long classLoaderOffset = UnSafeWrapper.getUnSafe().objectFieldOffset(classLoader);
-                if (UnSafeWrapper.getUnSafe().getObject(ReflectWrapper.class, classLoaderOffset) instanceof ClassLoader) {
-                    Object originalClassLoader = UnSafeWrapper.getUnSafe().getAndSetObject(ReflectWrapper.class, classLoaderOffset, null);
-                } else {
-                    throw new RuntimeException("not support");
-                }
+//                long classLoaderOffset = UnSafeWrapper.getUnSafe().objectFieldOffset(classLoader);
+//                if (UnSafeWrapper.getUnSafe().getObject(ReflectWrapper.class, classLoaderOffset) instanceof ClassLoader) {
+//                    Object originalClassLoader = UnSafeWrapper.getUnSafe().getAndSetObject(ReflectWrapper.class, classLoaderOffset, null);
+//                } else {
+//                    throw new RuntimeException("not support");
+//                }
             }
         } catch (Exception e) {
             throw new RuntimeException(e);
