@@ -14,7 +14,7 @@ public class TestJavaG {
         AClass aClass = new BClass();
         List<AClass> alist = new ArrayList<BClass>(); // 在 java 中这是不允许的编译就报错
 
-        // 但是数组却是可以的，因为数组没有在编译时擦除类型 类型擦除会导致类型不安全的问题
+        // 但是数组却是可以的，因为数组没有在编译时擦除类型，类型擦除会导致类型不安全的问题
         AClass[] aArray = new BClass[3];
 
         // 这样的代码肯定编译报错
