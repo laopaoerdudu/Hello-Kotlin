@@ -8,8 +8,8 @@ class TryTest {
     @Test
     fun test() {
         val gson = Gson()
-        val person = gson.fromJson<Person>("{\"age\":\"12\"}", Person::class.java)
+        val person = gson.fromJson("{\"age\":\"12\"}", Person::class.java)
         // 打印 null，意外绕过了 Kotlin 的空类型检查
-        println(person)
+        println("person = $person")
     }
 }
