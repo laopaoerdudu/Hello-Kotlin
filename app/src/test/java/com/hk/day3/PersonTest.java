@@ -5,7 +5,7 @@ import org.junit.Test;
 class PersonTest {
 
     @Test
-    void testPerson() {
+    public void testPerson() {
         // 不加 @JvmOverloads，你试试
         Person person = new Person(10);
     }

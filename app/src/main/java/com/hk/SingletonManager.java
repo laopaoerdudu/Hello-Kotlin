@@ -6,7 +6,7 @@ import java.util.Map;
 // android 里面的 wms，ams 等等系统单例服务都是这样的
 // 利用 map 管理就可以
 class SingletonManager {
-    private static Map<String, Object> objectMap = new HashMap<>();
+    private final static Map<String, Object> objectMap = new HashMap<>();
 
     private SingletonManager() {
     }
