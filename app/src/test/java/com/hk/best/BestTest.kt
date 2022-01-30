@@ -14,10 +14,12 @@ class BestTest {
             }
             val unsafe = theUnsafeField.get(null)
 
-            val allocateInstanceMethod = unsafeClass.getMethod("allocateInstance", Class::class.java)
-            val student = ((allocateInstanceMethod.invoke(unsafe, Student::class.java)) as Student).apply {
-                name = "David"
-            }
+            val allocateInstanceMethod =
+                unsafeClass.getMethod("allocateInstance", Class::class.java)
+            val student =
+                ((allocateInstanceMethod.invoke(unsafe, Student::class.java)) as Student).apply {
+                    name = "David"
+                }
             println(student.name)
         } catch (ex: Exception) {
             ex.printStackTrace()

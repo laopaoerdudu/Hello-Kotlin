@@ -13,18 +13,6 @@ Please check `BestTest.kt` source code
 
 `Unsafe` 提供了类似 C 语言指针一样操作内存空间的能力。
 
-#### Unsafe 一点用没有？
-
-大家都知道在 Android P 上面，Google 限制了 app 对 hidden API 的访问。
-
-那么 Google 是如何区分是我们 app 调用，还是它自己调用呢？
-
-其中有一个办法就是通过 ClassLoader，系统认为如果 ClassLoader 为 BootStrapClassLoader 则就认为是系统类，则放行。
-
-但是这样有个问题，假设 google 有一天把反射设置 classLoader 也完全限制掉，就不行了。
-
-那么怎么办？原理还是换 ClassLoader，但是我们不走 Java 反射的方式了，而是用 Unsafe:
-
 #### 深入理解 Kotlin 无参构造函数
 
 Kotlin 中不管是 class 还是 data class 都不会自动帮你生成无参的构造函数。
