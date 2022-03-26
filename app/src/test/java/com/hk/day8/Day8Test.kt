@@ -36,13 +36,13 @@ class Day8Test {
 //            println("Children: $a")
 //        }
 //    }
-//
+
 //    @Test
 //    fun test5() {
 //        val list = mutableListOf("one", "two")
 //        val c1 = Container(list)
 //        val c2 = c1.copy()
-//        list += "oops"
+//        list += "wwe"
 //        println("c1: ${c1.list.joinToString()}")
 //        println("c2: ${c2.list.joinToString()}")
 //    }
@@ -55,12 +55,12 @@ class Day8Test {
 //        println(j++)
 //        println(++j)
 //    }
-
+//
 //    @Test
 //    fun test7() {
 //        (1..4).forEach {
 //            if (it == 2) return
-//            print(it)
+//            println("63 -> $it")
 //        }
 //    }
 //
@@ -68,26 +68,26 @@ class Day8Test {
 //    fun test8() {
 //        (1..4).forEach(fun(it) {
 //            if (it == 2) return
-//            print(it)
+//            println("71 -> $it")
 //        })
 //    }
 
-    @Test
-    fun test9() {
-        val (name, items) = Boss("Kotlin", listOf(1, 2))
-        println("Hello $name, $items")
-    }
+//    @Test
+//    fun test9() {
+//        val (name, items) = Boss("Kotlin", listOf(1, 2, 3))
+//        println("Hello $name, $items")
+//    }
 
-    data class Boss(
-        val name: String,
-        private val items: List<Int>
-    ) : List<Int> by items
+//    data class Boss(
+//        val name: String,
+//        private val items: List<Int>
+//    ) : List<Int> by items
 
     @Test
     fun test10() {
         val x: Int? = 2
         val y = 3
         val sum = x ?: 0 + y
-        println(sum)
+        assert(2 == sum)
     }
 }

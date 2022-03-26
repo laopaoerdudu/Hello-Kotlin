@@ -4,20 +4,20 @@ import org.junit.Test
 
 class Day9Test {
 
-    @Test
-    fun test1() {
-        println("start")
-
-        doA {
-            return
-        }
-
-        println("end")
-    }
-
-    private inline fun doA(block: () -> Unit) {
-        block()
-    }
+//    @Test
+//    fun test1() {
+//        println("start")
+//
+//        doA {
+//            return
+//        }
+//
+//        println("end")
+//    }
+//
+//    private inline fun doA(block: () -> Unit) {
+//        block()
+//    }
 
     @Test
     fun test2() {
