@@ -9,7 +9,7 @@ class Day3Test {
         val master = Master("David")
         println("1: ${master.hostName}")
         println("2: ${master.hostName}")
-        StateManager().state = 100
+        //StateManager().state = 100
     }
 
     @Test

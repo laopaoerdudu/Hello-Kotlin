@@ -1,16 +1,16 @@
 package com.hk.day4
 
 open class C {
-    open fun foo() = "cc"
+    open fun foo() = "C #foo"
 }
 
 class D : C() {
-    override fun foo() = "dd"
+    override fun foo() = "D #foo"
 }
 
-fun C.foo() = "c"
+fun C.foo() = "C.foo"
 
-fun D.foo() = "d"
+fun D.foo() = "D.foo"
 
 fun printSys(c: C) {
     println(c.foo())

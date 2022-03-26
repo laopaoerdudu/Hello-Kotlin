@@ -5,9 +5,9 @@ open class C
 class D: C()
 
 // Kotlin 扩展函数的本质是静态函数
-fun C.foo() = "c"
+fun C.foo() = "C.foo()"
 
-fun D.foo() = "d"
+fun D.foo() = "D.foo()"
 
 fun printInfo(c: C) {
 
