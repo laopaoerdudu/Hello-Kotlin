@@ -10,19 +10,19 @@ class Human {
     private var work: String = "摔角手"
 
     constructor() {
-        println("主构造方法 constructor")
+        println("主构造函数 invoke")
     }
 
     constructor(name: String) {
-        println("带参数次构造方法 constructor $name")
+        println("带参数次构造方法 invoke")
     }
 
     init {
-        println("TestInit init")
+        println("Human init")
     }
 
     init {
-        println("TestInit init $work")
+        println("Human init $work")
     }
 
     companion object {
@@ -31,11 +31,7 @@ class Human {
         }
 
         init {
-            println("companion init one")
-        }
-
-        init {
-            println("companion init two")
+            println("companion init")
         }
     }
 }
