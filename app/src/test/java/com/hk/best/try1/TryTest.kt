@@ -9,7 +9,7 @@ class TryTest {
     fun test() {
         val gson = Gson()
         val person = gson.fromJson("{\"age\":\"12\"}", Person::class.java)
-        // 打印 null，意外绕过了 Kotlin 的空类型检查
+        // 意外绕过了 Kotlin 的空类型检查
         println("person = $person")
     }
 }

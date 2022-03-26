@@ -9,9 +9,9 @@ class Master(var name: String) {
     }
 }
 
-// 用 observable 来监听某个属性的变化
-class StateManager {
-    var state: Int by Delegates.observable(0) { _, oldValue, newValue ->
-        println("Observer state value changed from $oldValue to $newValue")
-    }
-}
+//// 用 observable 来监听某个属性的变化
+//class StateManager {
+//    var state: Int by Delegates.observable(0) { _, oldValue, newValue ->
+//        println("Observer state value changed from $oldValue to $newValue")
+//    }
+//}
