@@ -7,7 +7,7 @@ class MixedTest {
     @Test
     fun test() {
         // WHEN
-        val data = getData()
+        val data = ::getData.invoke()
 
         // THEN
         assert(0 == data)
