@@ -11,10 +11,9 @@ import java.io.File
 class ExampleUnitTest {
     @Test
     fun addition_isCorrect() {
-        //assertEquals(4, 2 + 2)
         val arrays = intArrayOf(1, 2, 3, 4, 5)
-        println(arrays)
-        println(arrays.contentToString())
+
+        assert("[1, 2, 3, 4, 5]" == arrays.contentToString())
     }
 
     @Test
