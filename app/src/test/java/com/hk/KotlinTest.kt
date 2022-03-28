@@ -18,7 +18,6 @@ class KotlinTest {
     fun test1() {
         // hello()
         hello().invoke()
-        //hello()()
     }
 
     @Test
@@ -31,6 +30,18 @@ class KotlinTest {
            \$world
         """.trimIndent()
         )
+    }
+
+    private fun printNumberSign(num: Int) {
+        // Kotlin 中没有类似于 Java 的三目运算符，取而代之的是 if-else 表达式，
+        // let 函数作用于它前面的对象
+        if (num < 0) {
+            "negative"
+        } else if (num > 0) {
+            "positive"
+        } else {
+            "zero"
+        }.let { print(it) }
     }
 
     @Test
@@ -124,19 +135,6 @@ class KotlinTest {
         fun run() = println("Hello World")
 
         Runnable { run() }.run()
-    }
-
-
-    private fun printNumberSign(num: Int) {
-        // Kotlin 中没有类似于 Java 的三目运算符，取而代之的是 if-else 表达式，
-        // let 函数作用于它前面的对象
-        if (num < 0) {
-            "negative"
-        } else if (num > 0) {
-            "positive"
-        } else {
-            "zero"
-        }.let { print(it) }
     }
 
     private fun printNumberSign2(num: Int) {
